@@ -63,14 +63,20 @@ var tweets = [
 
 ];
 
-for(var index = 0; index < tweets.length; index++) {
-    console.log(tweets[index].tweet);
-    console.log(tweets[index].username);
-    console.log(tweets[index].age);
-    console.log(tweets[index].created_at);
+// for(var index = 0; index < tweets.length; index++) {
+//     console.log(tweets[index].tweet);
+//     console.log(tweets[index].username);
+//     console.log(tweets[index].age);
+//     console.log(tweets[index].created_at);
+// }
 
+
+function checkAge(tweet) {
+    return tweet.age >= 18;
 }
 
+var eightteenPlusTweets = tweets.filter (checkAge);
+console.log(eightteenPlusTweets);
 
 
 
